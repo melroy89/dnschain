@@ -1,3 +1,8 @@
+**UPDATE April 21, 2017: Read the latest and most relevant blog post on [DPKI](https://github.com/okTurtles/dnschain/issues/180#issuecomment-255641398) versus CONIKS, CT, KT:**
+
+- **[CONIKS vs Key Transparency vs Certificate Transparency vs Blockchains](https://blog.okturtles.com/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/)**
+
+
 # DNSChain versus...
 
 - [Certificate Transparency](<#certificate-transparency>)
@@ -28,11 +33,9 @@ In [their words](http://convergence.io/details.html), Convergence:
 
 In our words: Convergence is similar to having a `known_hosts` ssh key file for your browser, and comparing it against your friend’s file. It's not a terrible idea, however:
 
-- It is not very user friendly. Users are asked to manage a list of notaries. This list of notaries is stored locally on the computer, or even the browser. Managing this list is not feasible for most users.
-- It's not clear how well it protects (or can protect) if some notaries haven't yet cached the latest SSL certificate for a particular website.
-- It does not provide MITM protection on first visit.
-- Waiting for group consensus means all connections have higher latency (slower page loads).
-- Both Convergence and Perspectives (see below) results in you sharing every website you visit with random third-parties. With DNSChain, if privacy is a concern, you can run your own server and only rely on it: it will provide both better performance and superior security.
+- It does not protect you if the MITM is sitting in front of the server you are visiting. Notaries would see exactly the same key that you see (the one that belongs to the MITM).
+- It introduces high latency on first visit in order for group consensus to form.
+
 
 ### Perspectives
 
